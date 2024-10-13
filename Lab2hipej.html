@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>hipej</title>
+  </head>
+  <body>
+    <xmp
+>
+# Lab 2 - Exceptions
+
+>> | Earned | Possible | Criteria                                         |
+>> | ------ | -------- | ------------------------------------------------ |
+>> |   15   |    15    | Intermediate Commits                             |
+>> |   60   |    60    | Technical quality (see point deductions in code) |
+>> |   15   |    15    | Coding standard compliance and program clarity   |
+>> |   10   |    10    | Following submission instructions                |
+>
+> # Feedback
+> * Nice work!
+
+
+
+# Die.java
+
+```
+```
+> #### -15 CheckStyle error
+
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:12:1: Missing a Javadoc comment. [MissingJavadocType]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:12:17: '{' is not preceded with whitespace. [WhitespaceAround]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:13:5: Missing a Javadoc comment. [JavadocVariable]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:13:23: Variable 'MIN_SIDES' must be private and have accessor methods. [VisibilityModifier]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:13:23: Name 'MIN_SIDES' must match pattern '^[a-z][a-zA-Z0-9]*$'. [StaticVariableName]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:14:5: Missing a Javadoc comment. [JavadocVariable]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:14:23: Variable 'MAX_SIDES' must be private and have accessor methods. [VisibilityModifier]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:14:23: Name 'MAX_SIDES' must match pattern '^[a-z][a-zA-Z0-9]*$'. [StaticVariableName]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:14:35: '100' is a magic number. [MagicNumber]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:19:5: Missing a Javadoc comment. [MissingJavadocMethod]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:21:27: '100' is a magic number. [MagicNumber]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:26:5: Missing a Javadoc comment. [MissingJavadocMethod]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:27:9: 'if' construct must use '{}'s. [NeedBraces]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:29:13: Name 'CurrentValue' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Die.java:33:5: Missing a Javadoc comment. [MissingJavadocMethod]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/DieNotRolledException.java:10:1: Missing a Javadoc comment. [MissingJavadocType]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/DieNotRolledException.java:10:62: Use a single space to separate non-whitespace characters. [SingleSpaceSeparator]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/DieNotRolledException.java:11:5: Missing a Javadoc comment. [MissingJavadocMethod]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Driver.java:19:23: Variable 'MIN_DICE' must be private and have accessor methods. [VisibilityModifier]
+> * Checkstyle ends with 25 errors.
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Driver.java:19:23: Name 'MIN_DICE' must match pattern '^[a-z][a-zA-Z0-9]*$'. [StaticVariableName]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Driver.java:23:23: Variable 'MAX_DICE' must be private and have accessor methods. [VisibilityModifier]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Driver.java:23:23: Name 'MAX_DICE' must match pattern '^[a-z][a-zA-Z0-9]*$'. [StaticVariableName]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Driver.java:23:34: '10' is a magic number. [MagicNumber]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Driver.java:92:15: Name 'Dice' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+> * Error:  /home/runner/work/lab-2-exceptions-jadenhype06/lab-2-exceptions-jadenhype06/src/hipej/Driver.java:144:27: '10' is a magic number. [MagicNumber]
+
+
+```
+/*
+ * Course: CSC1020
+ * Lab 2 - Exceptions
+ * Die class
+ * Name: Jaden Hipe
+ * Last Updated: 9/16/2024
+ */
+package hipej;
+
+import java.util.Random;
+
+public class Die{
+    public static int MIN_SIDES = 2;
+    public static int MAX_SIDES = 100;
+    private int currentValue = 0;
+    private final int numSides;
+    private final Random random = new Random();
+
+    public Die(int numSides) {
+        this.numSides = numSides;
+        if (!(numSides <= 100 && numSides >= 2)) {
+            throw new IllegalArgumentException();
+        }
+
+    }
+    public int getCurrentValue(){
+        if (currentValue < 1 || currentValue > numSides)
+            throw new DieNotRolledException();
+        int CurrentValue = currentValue;
+        currentValue = 0;
+        return CurrentValue;
+    }
+    public void roll() {
+        currentValue = random.nextInt(1, numSides + 1);
+    }
+
+}
+```
+
+# Driver.java
+
+```
+/*
+ * Course: CSC1020
+ * Lab 2 - Exceptions
+ * Main Driver class
+ * Name: Jaden
+ * Last Updated: Hipe
+ */
+package hipej;
+
+import java.util.Scanner;
+
+/**
+ * Driver class
+ */
+public class Driver {
+    /**
+     * Minimum dice
+     */
+    public static int MIN_DICE = 2;
+    /**
+     * Max dice
+     */
+    public static int MAX_DICE = 10;
+    public static void main(String[] args) {
+        int[] list;
+        list = getInput();
+        int[] rolled = rollDice(createDice(list[0], list[1]), list[1], list[2]);
+        int max = findMax(rolled);
+        report(list[0], rolled, max);
+
+    }
+
+    /**
+     * Finds highest number of values rolled,
+     * @param rolls array of rolls
+     * @return most common value
+     */
+    public static int findMax(int[] rolls) {
+        int max = 0;
+        for (int roll : rolls) {
+            if (roll > max) {
+                max = roll;
+            }
+        }
+        return max;
+    }
+
+    /**
+     * gets input from user
+     * @return split String into integers
+     */
+```
+> #### Missing Validation for Roll Count in getInput():
+
+> There's no validation to check if the number of rolls (third input) is greater than zero. 
+> If the user inputs a value less than or equal to zero, the program could exhibit undefined behavior.
+
+```
+    public static int[] getInput() {
+        boolean validinput = false;
+        int[] y = new int[3];
+        while(!validinput) {
+            Scanner scan = new Scanner(System.in);
+            String x = scan.nextLine();
+```
+> #### Inefficient Input Parsing
+> Use String.split(" ") to break the input into parts and process them
+
+```
+
+```
+> #### Repetitive Logic in rollDice() Method:
+
+> The method rollDice() calculates the possible sums from rolling the dice (possible[]) and checks them in two separate loops. 
+> This logic is inefficient because it reprocesses data unnecessarily.
+
+```
+            int start = 0;
+            int count = 0;
+            for (int i = 0; i <= x.length(); i++) {
+                if (i == x.length() || x.charAt(i) == ' ') {
+                    try {
+                        y[count] = Integer.parseInt(x.substring(start, i));
+                        start = i + 1;
+                        count++;
+
+                    } catch (StringIndexOutOfBoundsException e) {
+                        System.err.println("Invalid input");
+
+                    } catch (NumberFormatException e) {
+                        System.err.println("All values must be whole numbers");
+
+                    }
+                }
+                validinput = true;
+            }
+        }
+```
+> #### -5 Exception handling
+> You should throw an Exception here
+
+```
+        if (y[0] > MAX_DICE || y[0] < MIN_DICE) {
+            System.out.println("Invalid Input");
+        }
+        return y;
+    }
+
+    /**
+     * initializes the dice and puts them in a list
+     * @param numDice number of dice
+     * @param numSides number of sides on dice
+     * @return array of dice
+     */
+    public static Die[] createDice(int numDice, int numSides) {
+        Die[] Dice = new Die[numDice];
+        for (int i = 0; i < Dice.length; i++) {
+            Dice[i] = new Die(numSides);
+        }
+        return Dice;
+    }
+
+    /**
+     * Rolls the dice
+     * @param dice array of dice
+     * @param numSides number of sides on dice
+     * @param numRolls number of rolls that will occur
+     * @return array of stats
+     */
+    public static int[] rollDice(Die[] dice, int numSides, int numRolls) {
+        int[] all = new int[numRolls];
+        int[] possible = new int[(dice.length * numSides) - dice.length + 1];
+        int[] result = new int[(dice.length * numSides) - dice.length + 1];
+        int count = 0;
+        int count2 = 0;
+        for (int k = dice.length; k <= (dice.length * numSides); k++) {
+            possible[count] = k;
+            count++;
+        }
+        for (int i = 1; i <= numRolls; i++) {
+            int total = 0;
+            for (Die die : dice) { //dice.length is the amount of dice
+                die.roll();
+                total += die.getCurrentValue();
+
+            }
+            all[count2] = total;
+            count2++;
+        }
+        for (int res : all) {
+            for (int m = 0; m < possible.length; m++) {
+                if (res == possible[m]) {
+                    result[m]++;
+                }
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * graphs the dice stats
+     * @param numDice number of dice
+     * @param rolls array of stats of rolled dice
+     * @param max highest stat
+     */
+    public static void report(int numDice, int[] rolls, int max) {
+        int scale = max / 10;
+        int count = 0;
+        for (int roll : rolls) {
+            int numStars = roll / scale;
+            String stars = "";
+
+```
+> #### Inefficient String Concatenation
+> Use StringBuilder to build the string more efficiently, e.g.:
+> ```java
+StringBuilder stars = new StringBuilder();
+for (int j = 0; j < numStars; j++) {
+    stars.append("*");
+}
+```
+
+```
+            for (int j = 0; j < numStars; j++) {
+                stars += "*";
+            }
+
+            int data = numDice + count;
+            count++;
+            System.out.printf("%d :"+ roll +" \t%s", data, stars);
+            System.out.println();
+        }
+    }
+}
+```
+
+</xmp
+    >
+    <script
+      type="text/javascript"
+      src="https://csse.msoe.us/gradedown.js"
+    ></script>
+  </body>
+</html>
